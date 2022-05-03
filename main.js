@@ -9,17 +9,38 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
+let word = 'ississippi'
 
 const pigLatin = (word) => {
-
-  // Your code here
-
+let result = ''
+// First character of a string
+let charFirst = word.charAt(0);
+//I'm going to create, from scratch and my imagination totally alone without help, a variable that determines the first, well I guess a "string" of consonants (sp?)
+//let firstCon = ?
+// Same thing first vowel
+//let firstVowel = ??
+// Need to see where word ends, to add firstCon to the end, of the end, of the beginning, to the end...
+// add 'ay' to the end-end
+let vowels = ['a', 'e', 'i', 'o', 'u']
+// Loop vowels to match charFirst
+// var myStringArray = ["Hello","World"];
+var arrayLength = vowels.length;
+for (var i = 0; i < arrayLength; i++) {
+  console.log(vowels[i])
+  if (charFirst == vowels[i]) {
+    console.log(word + 'yay')
+    result = word + 'yay'
+    return result
+} else {
+  
 }
-
-// the first function called in the program to get an input from the user
-// to run the function use the command: node main.js
-// to close it ctrl + C
+return result
+}
+}
+//pigLatin(word)
+// // the first function called in the program to get an input from the user
+// // to run the function use the command: node main.js
+// // to close it ctrl + C
 const getPrompt = () => {
   rl.question('word ', (answer) => {
     console.log( pigLatin(answer) );
@@ -27,9 +48,9 @@ const getPrompt = () => {
   });
 }
 
-// Unit Tests
-// to use them run the command: npm test main.js
-// to close them ctrl + C
+// // Unit Tests
+// // to use them run the command: npm test main.js
+// // to close them ctrl + C
 if (typeof describe === 'function') {
 
   describe('#pigLatin()', () => {
