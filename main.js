@@ -9,21 +9,19 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-let word = 'ississippi'
+let word = 'car'
 
 const pigLatin = (word) => {
 let result = ''
 // First character of a string
 let charFirst = word.charAt(0);
-//I'm going to create, from scratch and my imagination totally alone without help, a variable that determines the first, well I guess a "string" of consonants (sp?)
-//let firstCon = ?
+let vowelFirst = word.indexOf
+//I'm going to create, from scratch a variable that determines the first, well I guess a "string" of consonants (sp?)
 // Same thing first vowel
-//let firstVowel = ??
 // Need to see where word ends, to add firstCon to the end, of the end, of the beginning, to the end...
 // add 'ay' to the end-end
 let vowels = ['a', 'e', 'i', 'o', 'u']
 // Loop vowels to match charFirst
-// var myStringArray = ["Hello","World"];
 var arrayLength = vowels.length;
 for (var i = 0; i < arrayLength; i++) {
   console.log(vowels[i])
@@ -32,10 +30,11 @@ for (var i = 0; i < arrayLength; i++) {
     result = word + 'yay'
     return result
 } else {
-  
+  // So, I'd like this to be the case wherein the first letter !== a vowel. I'd like it to identify the index that the first vowel sits at, and isolate the data that exists before it in the string. It should take that data, put it at the end of the existing string, and add "-ay" or "-yay" or whatever to the end. 
 }
 return result
 }
+
 }
 //pigLatin(word)
 // // the first function called in the program to get an input from the user
